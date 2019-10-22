@@ -26,6 +26,26 @@ class NewBoxForm extends Component {
 						id='height'
 					/>
 				</div>
+				<div>
+					<label htmlFor='width'>Width</label>
+					<input
+						type='text'
+						name='width'
+						value={this.state.width}
+						onChange={this.handleChange}
+						id='width'
+					/>
+				</div>
+				<div>
+					<label htmlFor='color'>Color</label>
+					<input
+						type='text'
+						name='color'
+						value={this.state.color}
+						onChange={this.handleChange}
+						id='color'
+					/>
+				</div>
 			</form>
 		);
 	}
