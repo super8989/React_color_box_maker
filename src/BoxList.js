@@ -17,7 +17,12 @@ class BoxList extends Component {
 
 	render() {
 		const boxes = this.state.boxes.map(box => (
-			<Box width={box.width} height={box.height} color={box.color} />
+			<Box
+				key={box.id}
+				width={box.width}
+				height={box.height}
+				color={box.color}
+			/>
 		));
 
 		return (
