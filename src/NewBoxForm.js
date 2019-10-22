@@ -5,6 +5,7 @@ class NewBoxForm extends Component {
 		super(props);
 		this.state = { height: "", width: "", color: "" };
 		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleChange(evt) {
@@ -13,9 +14,14 @@ class NewBoxForm extends Component {
 		});
 	}
 
+	handleSubmit(evt) {
+		evt.preventDefault();
+		this.props.createBox(this.state);
+	}
+
 	render() {
 		return (
-			<form>
+			<form onSubmit={this.handleSubmit}>
 				<div>
 					<label htmlFor='height'>Height</label>
 					<input
@@ -46,6 +52,7 @@ class NewBoxForm extends Component {
 						id='color'
 					/>
 				</div>
+				<button>Add New Box!</button>
 			</form>
 		);
 	}
