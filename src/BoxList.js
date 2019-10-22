@@ -16,8 +16,8 @@ class BoxList extends Component {
 		return (
 			<div>
 				<h1>Color Box Maker</h1>
-				{boxes}
 				<NewBoxForm />
+				{boxes}
 			</div>
 		);
 	}
